@@ -1,0 +1,121 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+	<title>The Flower Blog</title>
+	<link rel="stylesheet" href="master.css" type="text/css" media="screen" />
+		 		<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.0rc1.min.js"></script>
+  
+      <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
+      <script type="text/javascript" charset="utf-8" src="js/formquery.js"></script>
+      
+</head>
+<body>
+
+
+	<nav>
+		<ul>
+			<li class="selected"><a href="#">Blog</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Archives</a></li>
+			<li><a href="#">Contact</a></li>
+			<li class="subscribe"><a href="#">Subscribe via. RSS</a></li>
+		</ul>
+	</nav>
+	
+	<div id="content">
+		<div id="mainContent">
+			<section>
+				<article class="blogPost">
+					<header>
+						<h2>This is the title of a blog post</h2>
+						<p>Posted on <time datetime="2009-06-29T23:31+01:00">June 29th 2009</time> by <a href="#">Mads Kjaer</a> - <a href="#comments">3 comments</a></p>
+					</header>
+					<div id="cardHolder">
+
+						<form id="myform">
+							<select name="manarequirement">
+								<option value="0">0</option>
+								<option value="0">1</option>
+							</select>
+							<select name="discardrequirement">
+								<option value="0">0</option>
+								<option value="0">1</option>
+							</select>
+							<input type="submit" onclick="submitForm();"/>
+						</form>
+					</div>
+				</article>
+			</section>
+			
+		</div>
+		<aside>
+			<section>
+				<header>
+					<h3>Categories</h3>
+				</header>
+				<ul>
+					<li><a href="#">Lorem ipsum dolor</a></li>
+					<li><a href="#">Sit amet consectetur</a></li>
+					<li><a href="#">Adipisicing elit sed</a></li>
+					<li><a href="#">Do eiusmod tempor</a></li>
+					<li><a href="#">Incididunt ut labore</a></li>
+				</ul>
+			</section>
+			<section>
+				<header>
+					<h3>Archives</h3>
+				</header>
+				<ul>
+					<li><a href="#">December 2008</a></li>
+					<li><a href="#">January 2009</a></li>
+					<li><a href="#">February 2009</a></li>
+					<li><a href="#">March 2009</a></li>
+					<li><a href="#">April 2009</a></li>
+					<li><a href="#">May 2009</a></li>
+					<li><a href="#">June 2009</a></li>
+				</ul>
+			</section>
+		</aside>
+	</div>
+	<footer>
+		<div>
+			<section id="about">
+				<header>
+					<h3>About</h3>
+				</header>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco <a href="#">laboris nisi ut aliquip</a> ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</section>
+			<section id="blogroll">
+				<header>
+					<h3>Blogroll</h3>
+				</header>
+				<ul>
+					<li><a href="#">NETTUTS+</a></li>
+					<li><a href="#">FreelanceSwitch</a></li>
+					<li><a href="#">In The Woods</a></li>
+					<li><a href="#">Netsetter</a></li>
+					<li><a href="#">PSDTUTS+</a></li>
+				</ul>
+			</section>
+			<section id="popular">
+				<header>
+					<h3>Popular</h3>
+				</header>
+				<ul>
+					<li><a href="#">This is the title of a blog post</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+					<li><a href="#">Consectetur adipisicing elit, sed do eiusmod</a></li>
+					<li><a href="#">Duis aute irure dolor</a></li>
+					<li><a href="#">Excepteur sint occaecat cupidatat</a></li>
+					<li><a href="#">Reprehenderit in voluptate velit</a></li>
+					<li><a href="#">Officia deserunt mollit anim id est laborum</a></li>
+					<li><a href="#">Lorem ipsum dolor sit amet</a></li>
+				</ul>
+			</section>
+		</div>
+	</footer>
+	
+</body>
+</html>

@@ -12,8 +12,8 @@ public class Source {
 		ArrayList<ManaConsumable> returnObjs = new ArrayList<ManaConsumable>();
 		for(ManaConsumable mana:diceViewable)
 		{
-			if(mana.getManaColour()==mc)
-				returnObjs.add(mana);
+			//if(mana.getManaColour()==mc)
+				//returnObjs.add(mana);
 		}
 		
 		return returnObjs;

@@ -1,7 +1,5 @@
 package com.example.altem.mages;
 
-import java.util.ArrayList;
-
 public class GameContext {
 	private static GameContext ref;
 	public static GameContext getGameContext()
@@ -11,6 +9,7 @@ public class GameContext {
 		return ref;
 	}
 	
+	@Override
 	public Object clone()
 			throws CloneNotSupportedException
 		  {
@@ -18,8 +17,5 @@ public class GameContext {
 		    // that'll teach 'em
 		  }
 	
-	public ArrayList<ManaConsumable> getManaConsumables(ManaColour mc)
-	{
-		
-	}
+
 }

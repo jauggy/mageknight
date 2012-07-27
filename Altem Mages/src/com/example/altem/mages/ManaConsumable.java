@@ -1,7 +1,7 @@
 package com.example.altem.mages;
 
 public class ManaConsumable {
-	private ManaColour manaColour;
+	/*private ManaColour manaColour;
 	private ManaForm manaForm;
 	public ManaColour getManaColour() {
 		return manaColour;
@@ -33,5 +33,5 @@ public class ManaConsumable {
 	
 	public String toString(){
 		return manaColour.toString() + " " + manaForm.toString();
-	}
+	}*/
 }

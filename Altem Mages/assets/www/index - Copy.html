@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Drawing multiple images to a canvas using image.onload</title>
+   
+	 		<script src="js/jquery.js"></script>
+  
+      <script type="text/javascript" charset="utf-8" src="cordova-1.9.0.js"></script>
+      <script type="text/javascript" charset="utf-8" src="main.js"></script>
+ <style>
+	 html {
+		margin:0;
+		padding:0;
+		color:#000;
+		background:#a7a09a;
+		}
+ 	article
+ 	{
+ 		background-color:grey;
+ 		width:700px;
+ 		float:left;
+ 	}
+    img.opaque
+	{
+	opacity:0.4;
+	filter:alpha(opacity=40); /* For IE8 and earlier */
+	}
+
+   	
+	aside.sidebar{
+		width:150px;
+		height:700px;
+		float:right;
+		overflow-y: auto; 
+		background-color:red;
+	}
+	
+	section{
+		height:100%;
+		background-color:purple;
+		padding:10px;
+		
+	}
+	
+	ul
+	{
+	    list-style-type: none;
+	}
+	
+	footer {   
+	    background-color: blue;  
+	    clear:both;
+	}  
+    </style>
+    
+    
+    <script>
+    var pieceWidth = 50;
+    var pieceHeight = 50;
+    var grid = new Array();
+        
+    var drawCanvasImage = function(ctx,grid,row,col,x,y) {
+        return function() {
+           
+            var img = grid[row][col];
+            ctx.globalAlpha = 1;
+            ctx.drawImage(img,0,0,img.width,img.height, x, y,pieceWidth,pieceHeight );
+        }
+    }
+    function init2(){
+     	var canvas = document.getElementById('myCanvas');
+     	var ctx = canvas.getContext('2d');
+     	ctx.globalAlpha = 0.4;
+            ctx.beginPath();
+        ctx.rect(0, 0, 50, 50);
+        ctx.fillStyle = "white";
+        ctx.fill();
+            
+           
+    }
+    function clickedImg(imgId)
+    {
+    	alert(imgId);
+    	$('#'+imgId).fadeTo(0,0.5);
+    }
+    
+    function init() 
+    {
+    	
+		$('#sideList li').remove();
+		for(i=0;i<1000;i++)
+		{        
+			var imgId = 'img_'+i;
+			$('#sideList').append('<li><img id='+imgId+' onclick="clickedImg(this.id);" height="50" width="50" src="Desert.jpg"/></li>');
+		}
+		
+		$('sidebarDiv').addClass('sidebar')
+
+        
+    }
+    </script>
+
+</head>
+<body>
+
+
+    
+    
+    <section>
+    	I'm section
+    <article>
+    	I'm in article
+    	    <canvas id="myCanvas" width="300" height="200">No canvas support.</canvas>
+    	    <button onclick="init();">Go</button>
+    <button onclick="init2();">Go</button>
+	</article>
+	<aside  id="sidebarDiv" class="sidebar">
+
+		 <ul id="sideList"></ul>
+
+	</aside>
+	
+	</section>
+	
+	
+    <footer>
+        This is a derived work of code by
+        
+    </footer>
+</body>
+</html>

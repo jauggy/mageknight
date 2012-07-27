@@ -21,5 +21,10 @@ public class ManaRequirement extends Requirement {
 		//Find
 		return null;
 	}
+	@Override
+	public void execute(String selectable) {
+		// TODO Auto-generated method stub
+		
+	}
 
 }

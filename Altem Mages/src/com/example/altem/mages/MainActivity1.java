@@ -1,17 +1,21 @@
 package com.example.altem.mages;
 
+import org.apache.cordova.DroidGap;
+
+import com.example.altem.mages.jsinterface.PhoneGapInterface;
+
 import android.os.Bundle;
-import android.app.Activity;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
 
-public class MainActivity1 extends Activity {
-
+public class MainActivity1 extends DroidGap {
+	private PhoneGapInterface jsInterface;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_activity1);
+        super.init();
+        jsInterface = new PhoneGapInterface(this, this.appView);
+        appView.addJavascriptInterface(jsInterface, "PhoneGapInterface");
+        super.loadUrl("file:///android_asset/www/index.html");
     }
 
     @Override

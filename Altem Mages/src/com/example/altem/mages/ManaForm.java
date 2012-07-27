@@ -4,7 +4,8 @@ public enum ManaForm {
 	Crystal,
 	Token,
 	Source {
-	    public String toString() {
+	    @Override
+		public String toString() {
 	        return "Source Die";
 	    }
 	}

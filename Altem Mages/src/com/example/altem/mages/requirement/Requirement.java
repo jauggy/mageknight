@@ -13,4 +13,5 @@ public abstract class Requirement extends GameContextDependant {
 	}
 	public abstract String getLabelForSelect();
 	public abstract ArrayList<String> getSelectables();
+	public abstract void execute(String selectable);
 }
