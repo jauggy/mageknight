@@ -1,30 +1,52 @@
 package com.example.altem.mages.requirement;
 
 import java.util.ArrayList;
-import com.example.altem.mages.ManaColour;
+
+import com.example.altem.mages.ColorMatchRestriction;
+import com.example.altem.mages.IUniqueNameable;
+import com.example.altem.mages.ManaColor;
+import com.example.altem.mages.ManaConsumable;
 
 public class ManaRequirement extends Requirement {
-
-	private ManaColour manaColour;
-	public ManaRequirement(ManaColour mc){
-		this.manaColour = mc;
+	public enum ManaRequirementType{
+		Primary,Secondary
 	}
+	protected ManaColor manaColour;
+	protected ManaRequirementType requirementType;
+
+	
+	public ManaRequirement(ManaColor mc, ManaRequirementType type){
+		this.manaColour = mc;
+		this.requirementType = type;
+	}
+
 	@Override
-	public String getLabelForSelect() {
+	public String getDisplayLabel() {
 		// TODO Auto-generated method stub
 		return "Mana";
 	}
 
+
 	@Override
-	public ArrayList<String> getSelectables() {
+	public void execute() {
 		// TODO Auto-generated method stub
-		//Find
-		return null;
-	}
-	@Override
-	public void execute(String selectable) {
-		// TODO Auto-generated method stub
+		ManaConsumable ma = (ManaConsumable)gameContext.getUniqueNameableByName(this.getSelected());
+		gameContext.consumeMana(ma);
 		
+	}
+	
+	@Override
+	public IUniqueNameable[] getSelectables() {
+		// TODO Auto-generated method stub
+		ArrayList<ManaConsumable> stuff;
+		
+			stuff= this.gameContext.getUseableMana(manaColour);
+		
+		return stuff.toArray(new IUniqueNameable[stuff.size()]);
+	}
+	
+	public boolean isPrimary(){
+		return requirementType == ManaRequirementType.Primary;
 	}
 
 }

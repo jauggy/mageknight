@@ -7,7 +7,7 @@ public class Source {
 	private ArrayList<ManaConsumable> diceViewable;
 	private int startingDiceCount;
 	
-	public ArrayList<ManaConsumable> getManaConsumables(ManaColour mc)
+	public ArrayList<ManaConsumable> getManaConsumables(ManaColor mc)
 	{
 		ArrayList<ManaConsumable> returnObjs = new ArrayList<ManaConsumable>();
 		for(ManaConsumable mana:diceViewable)

@@ -1,6 +1,16 @@
 package com.example.altem.mages;
 
-public class ManaConsumable {
+public class ManaConsumable extends UniqueNameable {
+
+	private ManaColor manaColor;
+	private ManaForm manaForm;
+	public ManaConsumable(ManaColor color, ManaForm form){
+		
+	}
+	public String getDisplayLabel() {
+		// TODO Auto-generated method stub
+		return manaColor.toString() + " " + manaForm.toString();
+	}
 	/*private ManaColour manaColour;
 	private ManaForm manaForm;
 	public ManaColour getManaColour() {

@@ -2,23 +2,12 @@ package com.example.altem.mages;
 
 import com.example.altem.mages.requirement.Requirement;
 
-public class Card {
-	public Card(int uniqueId, 
-			int cardNumber, 
-			String name, 
-			String basicText, 
-			String strongerText, 
-			Requirement basicRequirement, 
-			Requirement strongerRequirement)
-	{
-		
+public abstract class Card extends UniqueNameable{
+	protected String displayLabel;
+	public Card(String displayLabel){
+		this.displayLabel = displayLabel;
 	}
-	
-	//called by jquery when user submits form to use the card
-	//dropdown name: effect
-	//requirement dropdown name: requirement name
-	public void use()
-	{
-		
+	public String getDisplayLabel(){
+		return displayLabel;
 	}
 }
