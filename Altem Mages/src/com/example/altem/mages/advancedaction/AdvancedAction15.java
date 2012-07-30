@@ -12,6 +12,11 @@ import com.example.altem.mages.cards.ReputationCE;
 
 public class AdvancedAction15 extends DeedCard {
 
+	public AdvancedAction15() {
+		super("HEROIC TALE");
+		// TODO Auto-generated constructor stub
+	}
+
 	@Override
 	protected String initBasicText() {
 		// TODO Auto-generated method stub

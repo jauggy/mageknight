@@ -2,10 +2,10 @@ package com.example.altem.mages.requirement;
 
 import java.util.ArrayList;
 
-import com.example.altem.mages.Card;
 import com.example.altem.mages.CardLocation;
 import com.example.altem.mages.ColorMatchRestriction;
 import com.example.altem.mages.IUniqueNameable;
+import com.example.altem.mages.cards.Card;
 
 public class ThrowRequirement extends Requirement {
 	private ColorMatchRestriction restriction;

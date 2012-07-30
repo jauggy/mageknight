@@ -6,8 +6,11 @@ import com.example.altem.mages.ActionType;
 import com.example.altem.mages.ColorMatchRestriction;
 import com.example.altem.mages.ManaColor;
 import com.example.altem.mages.RequirementTable;
+import com.example.altem.mages.UniqueHelper;
 import com.example.altem.mages.UniqueNameable;
 import com.example.altem.mages.requirement.CardGainManaRequirement;
+import com.example.altem.mages.viewmodel.CardEffectDTO;
+import com.example.altem.mages.viewmodel.DTO;
 
 public abstract class CardEffect extends UniqueNameable {
 	//Determines when useable
@@ -89,5 +92,11 @@ public abstract class CardEffect extends UniqueNameable {
 	
 	public void addCardGainManaRequirement(ColorMatchRestriction res){
 		this.requirementTable.addRequirement(new CardGainManaRequirement(res));
+	}
+	
+	public DTO toDTO(){
+		CardEffectDTO c = new CardEffectDTO(this);
+		c.Requirements = UniqueHelper.toDTOArray(this.requirementTable.getRequirements());
+		return c;
 	}
 }

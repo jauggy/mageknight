@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import com.example.altem.mages.UniqueNameable;
 import com.example.altem.mages.actioncomponent.Attack;
 import com.example.altem.mages.actioncomponent.Block;
+import com.example.altem.mages.viewmodel.DTO;
 
 public class Enemy extends UniqueNameable{
 	private boolean disabled;
@@ -54,6 +55,12 @@ public class Enemy extends UniqueNameable{
 	public String getDisplayLabel() {
 		// TODO Auto-generated method stub
 		return displayLabel;
+	}
+
+	@Override
+	public DTO toDTO() {
+		// TODO Auto-generated method stub
+		return new DTO(this);
 	}
 	
 	

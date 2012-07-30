@@ -1,9 +1,10 @@
 package com.example.altem.mages.requirement;
 
-import java.util.ArrayList;
-
 import com.example.altem.mages.IUniqueNameable;
+import com.example.altem.mages.UniqueHelper;
 import com.example.altem.mages.UniqueNameable;
+import com.example.altem.mages.viewmodel.DTO;
+import com.example.altem.mages.viewmodel.RequirementDTO;
 
 //Cards effects can have requirements such as mana cost etc.
 public abstract class Requirement extends UniqueNameable implements IUniqueNameable {
@@ -29,9 +30,10 @@ public abstract class Requirement extends UniqueNameable implements IUniqueNamea
 	}
 	protected abstract void execute();
 	
-	public  RequirementDTO toDTO(){
-		IUniqueNameable[] selectables = getSelectables();
-		return new RequirementDTO(uniqueName, getDisplayLabel(), selectables) ;
+	public DTO toDTO(){
+		RequirementDTO r = new RequirementDTO(this);
+		r.Selectables = UniqueHelper.toDTOArray(this.getSelectables());
+		return r;
 	}
 	
 	public String getSelected(){

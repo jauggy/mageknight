@@ -22,5 +22,7 @@ public abstract class UniqueNameable extends GameContextDependent implements IUn
 		      return classname.substring(idx + 1, classname.length());
 		    return classname;
 		  }
+	 
+	
 	
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import com.example.altem.mages.cards.GainCardCE.GainCardRestriction;
-import com.example.altem.mages.cards.NonWoundCard;
+import com.example.altem.mages.cards.Card;
 import com.example.altem.mages.cards.Unit;
 import com.example.altem.mages.enemies.Enemy;
 
@@ -128,7 +128,7 @@ public class GameContext {
 	}
 
 	// -------------------CARDS----------------------------
-	private NonWoundCard selectedCard;
+	private Card selectedCard;
 
 	public void discardCard(Card card) {
 

@@ -19,7 +19,7 @@ public class AmbushCE  extends CardEffect implements ICardListener{
 		
 	}
 
-	public void onCardPreExecute(NonWoundCard selectedCard) {
+	public void onCardPreExecute(Card selectedCard) {
 		// TODO Auto-generated method stub
 		CardEffect  ce =selectedCard.getEffectInPlay();
 		if(ce instanceof AttackCE){
@@ -38,7 +38,7 @@ public class AmbushCE  extends CardEffect implements ICardListener{
 		gameContext.registerCardListener(this);
 	}
 
-	public void onCardPostExecute(NonWoundCard selectedCard) {
+	public void onCardPostExecute(Card selectedCard) {
 		// TODO Auto-generated method stub
 		
 	}

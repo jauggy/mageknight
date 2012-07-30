@@ -11,7 +11,7 @@ import com.example.altem.mages.requirement.ThrowRequirement;
 
 public class RequirementTable {
 	private ManaRequirement primaryManaRequirement;
-	private ArrayList<IUniqueNameable> requirements; 
+	private ArrayList<Requirement> requirements; 
 	public void addPrimaryManaRequirement(ManaColor color){
 		primaryManaRequirement = new ManaRequirement(color,ManaRequirementType.Primary);
 		requirements.add(primaryManaRequirement);
@@ -56,6 +56,10 @@ public class RequirementTable {
 	public void reset(){
 		if(primaryManaRequirement!=null)
 		primaryManaRequirement.setVisible(true);
+	}
+	
+	public ArrayList<Requirement> getRequirements(){
+		return this.requirements;
 	}
 
 }

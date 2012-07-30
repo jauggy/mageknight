@@ -3,16 +3,16 @@
 <html lang="en">
 <head>
 	<title>The Flower Blog</title>
-	  <link rel="stylesheet" href="master.css" />
+	<link rel="stylesheet" href="master.css" type="text/css" media="screen" />
 		 		<script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
-
+    <script type="text/javascript" charset="utf-8" src="js/jquery.mobile-1.0rc1.min.js"></script>
+  
       <script type="text/javascript" charset="utf-8" src="js/cordova-1.9.0.js"></script>
-<script type="text/javascript" charset="utf-8" src="js/main.js"></script>
-
+      <script type="text/javascript" charset="utf-8" src="js/formquery.js"></script>
       
 </head>
-<body onload="test();">
- 
+<body>
+
 
 	<nav>
 		<ul>
@@ -33,8 +33,18 @@
 						<p>Posted on <time datetime="2009-06-29T23:31+01:00">June 29th 2009</time> by <a href="#">Mads Kjaer</a> - <a href="#comments">3 comments</a></p>
 					</header>
 					<div id="cardHolder">
-						
-						
+
+						<form id="myform">
+							<select name="manarequirement">
+								<option value="0">0</option>
+								<option value="0">1</option>
+							</select>
+							<select name="discardrequirement">
+								<option value="0">0</option>
+								<option value="0">1</option>
+							</select>
+							<input type="submit" onclick="submitForm();"/>
+						</form>
 					</div>
 				</article>
 			</section>

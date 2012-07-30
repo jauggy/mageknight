@@ -10,14 +10,14 @@ public class BlockCE extends CardEffect {
 	public BlockCE(int i, CEType ceType, ManaColor manaColor) {
 		// TODO Auto-generated constructor stub
 		super(ceType.toString());
-		this.requirementTable.addManaRequirement(manaColor);
+		this.requirementTable.addPrimaryManaRequirement(manaColor);
 	}
 
 	public BlockCE(int i, CEType ceType, ManaColor mc1, ManaColor mc2) {
 		// TODO Auto-generated constructor stub
 		super(ceType.toString());
-		this.requirementTable.addManaRequirement(mc1);
-		this.requirementTable.addManaRequirement(mc2);
+		this.requirementTable.addPrimaryManaRequirement(mc1);
+		this.requirementTable.addSecondaryManaRequirement(mc2);
 	}
 
 	@Override

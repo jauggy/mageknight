@@ -10,7 +10,7 @@ public class DisableCE extends CardEffect{
 	protected void ExecutePrimary() {
 		// TODO Auto-generated method stub
 		Enemy e = (Enemy)this.gameContext.getUniqueNameableByName(enemyReq.getSelected());
-		e.d
+		e.disable();
 	}
 
 	@Override

@@ -2,7 +2,7 @@ package com.example.altem.mages.cards;
 
 import java.util.ArrayList;
 
-public abstract class Unit extends NonWoundCard{
+public abstract class Unit extends Card{
 	public enum UnitStatus{
 		Spent, Wounded, Poisoned, CannotAssignDamage, Ready
 	}
@@ -18,8 +18,8 @@ public abstract class Unit extends NonWoundCard{
 		status=st;
 	}
 	
-	@Override
-	public void reset(){
+	
+	public void onEndTurn(){
 		if(status!=UnitStatus.Wounded && status!=UnitStatus.Poisoned)
 			this.status = UnitStatus.Ready;
 	}

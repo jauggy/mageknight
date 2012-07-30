@@ -11,7 +11,7 @@ import com.example.altem.mages.cards.CardEffect;
 import com.example.altem.mages.cards.DeedCard;
 import com.example.altem.mages.cards.InfluenceCE;
 import com.example.altem.mages.cards.MoveCE;
-import com.example.altem.mages.requirement.ActionTypeChoiceRequirement;
+
 
 public class AdvancedAction14 extends DeedCard{
 	public AdvancedAction14() {
@@ -19,8 +19,7 @@ public class AdvancedAction14 extends DeedCard{
 		// TODO Auto-generated constructor stub
 	}
 
-	private ActionTypeChoiceRequirement basicRequirement;
-	private ActionTypeChoiceRequirement strongerRequirement;
+
 	@Override
 	protected String initBasicText() {
 		// TODO Auto-generated method stub

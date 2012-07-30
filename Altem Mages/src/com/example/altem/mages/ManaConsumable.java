@@ -1,5 +1,7 @@
 package com.example.altem.mages;
 
+import com.example.altem.mages.viewmodel.DTO;
+
 public class ManaConsumable extends UniqueNameable {
 
 	private ManaColor manaColor;
@@ -44,4 +46,9 @@ public class ManaConsumable extends UniqueNameable {
 	public String toString(){
 		return manaColour.toString() + " " + manaForm.toString();
 	}*/
+	@Override
+	public DTO toDTO() {
+		// TODO Auto-generated method stub
+		return new DTO(this);
+	}
 }

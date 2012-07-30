@@ -5,7 +5,8 @@ public class DisableIfBlockedEffect extends EnemyEffect {
 	@Override
 	public void executeEffect(Enemy enemy) {
 		// TODO Auto-generated method stub
-		enemy.
+		if(enemy.isBlocked())
+			enemy.disable();
 	}
 
 }

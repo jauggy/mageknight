@@ -2,19 +2,21 @@ package com.example.altem.mages;
 
 import org.apache.cordova.DroidGap;
 
-import com.example.altem.mages.jsinterface.CardJSInterface;
-import com.example.altem.mages.jsinterface.PhoneGapInterface;
-
+import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.view.Menu;
 
+import com.example.altem.mages.jsinterface.JSInterfaceBase;
+
 public class MainActivity1 extends DroidGap {
-	private PhoneGapInterface jsInterface;
+	private JSInterfaceBase jsInterface;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.init();
-        jsInterface = new CardJSInterface(this, this.appView);
+        AssetManager  am = getResources().getAssets();
+        jsInterface = new JSInterfaceBase(this, this.appView, am);
         appView.addJavascriptInterface(jsInterface, "PhoneGapInterface");
         super.loadUrl("file:///android_asset/www/index.html");
     }
